@@ -9,8 +9,7 @@ def encrypt_image(input_path, output_path, key):
     for i in range(width):
         for j in range(height):
             r, g, b = pixels[i, j]
-
-            # swapping red and blue channels
+            
             encrypted_pixel = (b, g, r)
 
             pixels[i, j] = encrypted_pixel
@@ -28,15 +27,13 @@ def decrypt_image(input_path, output_path, key):
         for j in range(height):
             r, g, b = pixels[i, j]
 
-            # swapping red and blue channels back
             decrypted_pixel = (b, g, r)
 
             pixels[i, j] = decrypted_pixel
 
     img.save(output_path)
     print("Image decrypted successfully!")
-
- # image path
+    
 input_image = r"C:\Users\Dell\Desktop\Task2\input.jpg"
 encrypted_image = r"C:\Users\Dell\Desktop\Task2\decrypted image.jpg"
 decrypted_image = r"C:\Users\Dell\Desktop\Task2\encrypted image.jpg"
